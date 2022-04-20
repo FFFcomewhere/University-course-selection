@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package pb;
+option go_package ="./pb";    //添加的代码
+
+//    protoc --go_out=.  --go-grpc_out=.   pb/string.proto
+
+service StringService{
+  rpc Concat(StringRequest) returns (StringResponse) {}
+}
+
+message StringRequest {
+  string A = 1;
+  string B = 2;
+}
+
+message StringResponse {
+  string Ret = 1;
+  string err = 2;
+}

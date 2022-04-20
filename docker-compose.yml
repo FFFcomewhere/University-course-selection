@@ -1,0 +1,148 @@
+version: "3.5"
+
+#services mysql redis  etcd
+# 网络配置
+networks:
+  basic:
+#   basic:
+#     driver: ${NETWORKS_DRIVER}
+
+services:
+################my services####################################
+#   string-op:             # 自定义容器名称
+#     build:
+#       context: ./string # 指定构建使用的 Dockerfile 文件
+#     environment:
+#       - TZ=${TZ}
+#     ports:
+#       - "10088:10086"
+#     networks:
+#       - basic
+
+
+
+##################offical services#####################
+  mysql:
+    container_name: mysql
+    image: mysql
+    environment:
+      - TZ=${TZ}
+      - MYSQL_USER=${MYSQL_USERNAME}                  # 设置 Mysql 用户名称
+      - MYSQL_PASSWORD=${MYSQL_PASSWORD}              # 设置 Mysql 用户密码
+      - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}   # 设置 Mysql root 用户密码
+      - MYSQL_DATABASE=${MYSQL_DATABASE}
+    volumes:
+      - ${DATA_PATH_HOST}/mysql1:/var/lib/mysql        # 引用 .env 配置中 DATA_PATH_HOST 变量，将宿主机上存放 Mysql 数据的目录挂载到容器中 /var/lib/mysql 目录
+    ports:
+      - "${MYSQL_PORT}:3306"
+    networks:
+      - basic
+
+
+  redis:
+    container_name: redis
+    image: redis
+    environment:
+      - TZ=${TZ}
+    volumes:
+      - ${DATA_PATH_HOST}/redis:/data                 # 引用 .env 配置中 DATA_PATH_HOST 变量，将宿主机上存放 Redis 数据的目录挂载到容器中 /data 目录
+    ports:
+      - "${REDIS_PORT}:6379"
+    networks:
+      - basic
+
+
+  etcd1:
+    container_name: etcd1
+    image:  quay.io/coreos/etcd
+    command: etcd -name etcd1 -advertise-client-urls http://0.0.0.0:2379 -listen-client-urls http://0.0.0.0:2379 -listen-peer-urls http://0.0.0.0:2380 -initial-cluster-token etcd-cluster -initial-cluster "etcd1=http://etcd1:2380,etcd2=http://etcd2:2380,etcd3=http://etcd3:2380" -initial-cluster-state new
+    ports:
+      - "2379:2379"
+      - "2380:2380"
+    networks:
+      - basic
+
+
+  etcd2:
+    container_name: etcd2
+    image:  quay.io/coreos/etcd
+    command: etcd -name etcd2 -advertise-client-urls http://0.0.0.0:2379 -listen-client-urls http://0.0.0.0:2379 -listen-peer-urls http://0.0.0.0:2380 -initial-cluster-token etcd-cluster -initial-cluster "etcd1=http://etcd1:2380,etcd2=http://etcd2:2380,etcd3=http://etcd3:2380" -initial-cluster-state new
+    ports:
+      - "2381:2379"
+      - "2382:2380"
+    networks:
+      - basic
+
+  etcd3:
+    container_name: etcd3
+    image:  quay.io/coreos/etcd
+    command: etcd -name etcd3 -advertise-client-urls http://0.0.0.0:2379 -listen-client-urls http://0.0.0.0:2379 -listen-peer-urls http://0.0.0.0:2380 -initial-cluster-token etcd-cluster -initial-cluster "etcd1=http://etcd1:2380,etcd2=http://etcd2:2380,etcd3=http://etcd3:2380" -initial-cluster-state new
+    ports:
+      - "2383:2379"
+      - "2384:2380"
+    networks:
+      - basic
+
+  zipkin:
+    container_name: zipkin
+    image: openzipkin/zipkin
+    ports:
+      - "9411:9411"
+
+  consul:
+    image: progrium/consul:latest
+    ports:
+      - 8400:8400
+      - 8500:8500
+      - 8600:53/udp
+    hostname: consulserver
+    command: -server -bootstrap -ui-dir /ui
+
+
+  mysql-manage:
+    container_name: mysql-manage
+    image: phpmyadmin/phpmyadmin
+    environment:
+      - TZ=${TZ}
+      - PMA_ARBITRARY=1
+      - MYSQL_USER=${MYSQL_MANAGE_USERNAME}               # 设置连接的 Mysql 服务用户名称
+      - MYSQL_PASSWORD=${MYSQL_MANAGE_PASSWORD}           # 设置连接的 Mysql 服务用户密码
+      - MYSQL_ROOT_PASSWORD=${MYSQL_MANAGE_ROOT_PASSWORD} # 设置连接的 Mysql 服务 root 用户密码
+      - PMA_HOST=${MYSQL_MANAGE_CONNECT_HOST}             # 设置连接的 Mysql 服务 host，可以是 Mysql 服务容器的名称，也可以是 Mysql 服务容器的 ip 地址
+      - PMA_PORT=${MYSQL_MANAGE_CONNECT_PORT}             # 设置连接的 Mysql 服务端口号
+    ports:
+      - "${MYSQL_MANAGE_PORT}:80"                         # 设置容器80端口映射指定宿主机端口，用于宿主机访问可视化web
+    depends_on:                                           # 依赖容器
+      - mysql                                             # 在 Mysql 服务容器启动后启动
+    networks:
+      - basic
+
+
+  redis-manage:
+    container_name: redis-manage
+    image: erikdubbelboer/phpredisadmin
+    environment:
+      - TZ=${TZ}
+      - ADMIN_USER=${REDIS_MANAGE_USERNAME}           # 设置 Redis 可视化管理的用户名称
+      - ADMIN_PASS=${REDIS_MANAGE_PASSWORD}           # 设置 Redis 可视化管理的用户密码
+      - REDIS_1_HOST=${REDIS_MANAGE_CONNECT_HOST}     # 设置连接的 Redis 服务 host，可以是 Redis 服务容器的名称，也可以是 Redis 服务容器的 ip 地址
+      - REDIS_1_PORT=${REDIS_MANAGE_CONNECT_PORT}     # 设置连接的 Redis 服务端口号
+    ports:
+      - "${REDIS_MANAGE_PORT}:80"                     # 设置容器80端口映射指定宿主机端口，用于宿主机访问可视化web
+    depends_on:                                       # 依赖容器
+      - redis                                         # 在 Redis 服务容器启动后启动
+    networks:
+      - basic
+
+
+  etcd-manage:
+    container_name: etcd-manage
+    image: evildecay/etcdkeeper
+    environment:
+      - TZ=${TZ}
+    ports:
+      - "${ETCD_MANAGE_PORT}:8080"                    # 设置容器8080端口映射指定宿主机端口，用于宿主机访问可视化web
+    depends_on:                                       # 依赖容器
+      - etcd1                                         # 在 etcd 服务容器启动后启动
+    networks:
+      - basic

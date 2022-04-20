@@ -4,17 +4,33 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9f883b19-e419-40dd-a8ed-4de902c8761f" name="变更" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/discovery/discovery.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/discovery/register.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docke-compose.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
+    <list default="true" id="9f883b19-e419-40dd-a8ed-4de902c8761f" name="变更" comment="添加string任务进行测试">
+      <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/discovery/discovery_test.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/discovery/register_test.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/loadbalance/loadbalance.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/loadbalance/loadbalance_test.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/user.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/string/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/string/rpc/client.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/string/rpc/pb/string.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/string/rpc/server.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/string/rpc/string-service/service.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/string/string_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/discovery/discovery.go" beforeDir="false" afterPath="$PROJECT_DIR$/common/discovery/discovery.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/discovery/register.go" beforeDir="false" afterPath="$PROJECT_DIR$/common/discovery/register.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docke-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/string/config/config.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/string/discovery/discovery.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/string/discovery/register.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/string/endpoint/endpoint.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/string/main.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/string/plugins/logging.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/string/service/service.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/string/test1.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/string/transport/http.go" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,7 +45,7 @@
       </list>
     </option>
   </component>
-  <component name="GOROOT" url="file://$USER_HOME$/sdk/go1.17.8" />
+  <component name="GOROOT" url="file:///usr/local/go" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -45,9 +61,17 @@
     <option name="indexEntireGoPath" value="false" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/go.mod" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/go_path/pkg/mod/go.etcd.io/etcd/client/v3@v3.5.3/client.go" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/string/Dockerfile" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/common/discovery/discovery.go" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/common/discovery/register.go" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/go_path/pkg/mod/github.com/zeromicro/go-zero@v1.3.2/core/logx/tracelogger.go" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/docke-compose.yml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/docker-compose.yml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/string/main.go" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/common/discovery/register_test.go" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/string/rpc/server.go" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/common/discovery/discovery_test.go" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/go_path/pkg/mod/github.com/go-kit/kit@v0.12.0/sd/etcdv3/client.go" root0="SKIP_INSPECTION" />
     <setting file="file://$USER_HOME$/sdk/go1.17.8/src/context/context.go" root0="SKIP_INSPECTION" />
   </component>
   <component name="KubernetesApiPersistence">
@@ -71,27 +95,33 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="configurable..is.expanded" value="false" />
+    <property name="configurable.GoLibrariesConfigurable.is.expanded" value="true" />
     <property name="go.format.on.save.advertiser.fired" value="true" />
     <property name="go.formatter.settings.were.checked" value="true" />
     <property name="go.import.settings.migrated" value="true" />
     <property name="go.modules.go.list.on.any.changes.was.set" value="true" />
     <property name="go.sdk.automatically.set" value="true" />
     <property name="go.watchers.conflict.with.on.save.actions.check.performed" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/common" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="go.vgo" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/string/rpc" />
       <recent name="$PROJECT_DIR$/common" />
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/pkg" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/string/rpc/string-service" />
+      <recent name="$PROJECT_DIR$/string" />
       <recent name="$PROJECT_DIR$/service/shorturl/rpc/transform" />
       <recent name="$PROJECT_DIR$/service/shorturl/rpc" />
       <recent name="$PROJECT_DIR$/etcd" />
     </key>
   </component>
-  <component name="RunManager" selected="Docker.University-course-selection">
+  <component name="RunManager" selected="Docker.string/Dockerfile">
     <configuration default="true" type="GoApplicationRunConfiguration" factoryName="Go Application">
       <module name="University-course-selection" />
       <working_directory value="$PROJECT_DIR$" />
@@ -101,47 +131,61 @@
       <filePath value="$PROJECT_DIR$" />
       <method v="2" />
     </configuration>
-    <configuration name="go build University-course-selection/service/user/api" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+    <configuration name="go build github.com/FFFcomewhere/University-course-selection/string" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="University-course-selection" />
-      <working_directory value="$PROJECT_DIR$/service/user/api" />
-      <kind value="PACKAGE" />
-      <package value="University-course-selection/service/user/api" />
-      <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$/service/user/api/user.go" />
-      <method v="2" />
-    </configuration>
-    <configuration name="go build University-course-selection/service/user/rpc" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
-      <module name="University-course-selection" />
-      <working_directory value="$PROJECT_DIR$/service/user/rpc" />
-      <kind value="PACKAGE" />
-      <package value="University-course-selection/service/user/rpc" />
-      <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$/service/user/rpc/user.go" />
-      <method v="2" />
-    </configuration>
-    <configuration name="go build hello.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
-      <module name="University-course-selection" />
-      <working_directory value="$PROJECT_DIR$/service/hello" />
+      <working_directory value="$PROJECT_DIR$" />
+      <EXTENSION ID="net.ashald.envfile">
+        <option name="IS_ENABLED" value="false" />
+        <option name="IS_SUBST" value="false" />
+        <option name="IS_PATH_MACRO_SUPPORTED" value="false" />
+        <option name="IS_IGNORE_MISSING_FILES" value="false" />
+        <option name="IS_ENABLE_EXPERIMENTAL_INTEGRATIONS" value="false" />
+        <ENTRIES>
+          <ENTRY IS_ENABLED="true" PARSER="runconfig" />
+        </ENTRIES>
+      </EXTENSION>
       <kind value="FILE" />
+      <package value="github.com/FFFcomewhere/University-course-selection/string" />
       <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$/service/hello/hello.go" />
+      <filePath value="$PROJECT_DIR$/string/main.go" />
       <method v="2" />
     </configuration>
-    <configuration name="go build shorturl/api" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+    <configuration name="go build github.com/FFFcomewhere/University-course-selection/string/rpc (1)" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="University-course-selection" />
-      <working_directory value="$PROJECT_DIR$/service/shorturl/api" />
-      <kind value="PACKAGE" />
-      <package value="shorturl/api" />
-      <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$/service/shorturl/api/shorturl.go" />
-      <method v="2" />
-    </configuration>
-    <configuration name="go build shorturl.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
-      <module name="University-course-selection" />
-      <working_directory value="$PROJECT_DIR$/service/shorturl/api" />
+      <working_directory value="$PROJECT_DIR$" />
+      <EXTENSION ID="net.ashald.envfile">
+        <option name="IS_ENABLED" value="false" />
+        <option name="IS_SUBST" value="false" />
+        <option name="IS_PATH_MACRO_SUPPORTED" value="false" />
+        <option name="IS_IGNORE_MISSING_FILES" value="false" />
+        <option name="IS_ENABLE_EXPERIMENTAL_INTEGRATIONS" value="false" />
+        <ENTRIES>
+          <ENTRY IS_ENABLED="true" PARSER="runconfig" />
+        </ENTRIES>
+      </EXTENSION>
       <kind value="FILE" />
+      <package value="github.com/FFFcomewhere/University-course-selection/string/rpc" />
       <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$/service/shorturl/api/shorturl.go" />
+      <filePath value="$PROJECT_DIR$/string/rpc/server.go" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build github.com/FFFcomewhere/University-course-selection/string/rpc" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="University-course-selection" />
+      <working_directory value="$PROJECT_DIR$" />
+      <EXTENSION ID="net.ashald.envfile">
+        <option name="IS_ENABLED" value="false" />
+        <option name="IS_SUBST" value="false" />
+        <option name="IS_PATH_MACRO_SUPPORTED" value="false" />
+        <option name="IS_IGNORE_MISSING_FILES" value="false" />
+        <option name="IS_ENABLE_EXPERIMENTAL_INTEGRATIONS" value="false" />
+        <ENTRIES>
+          <ENTRY IS_ENABLED="true" PARSER="runconfig" />
+        </ENTRIES>
+      </EXTENSION>
+      <kind value="FILE" />
+      <package value="github.com/FFFcomewhere/University-course-selection/string/rpc" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$/string/rpc/client.go" />
       <method v="2" />
     </configuration>
     <configuration default="true" type="GoTestRunConfiguration" factoryName="Go Test">
@@ -154,49 +198,62 @@
       <framework value="gotest" />
       <method v="2" />
     </configuration>
-    <configuration name="University-course-selection" type="docker-deploy" factoryName="docker-compose.yml" server-name="Docker">
+    <configuration name="docker-compose.yml: Compose 部署" type="docker-deploy" factoryName="docker-compose.yml" server-name="Docker">
       <deployment type="docker-compose.yml">
         <settings>
           <option name="envFilePath" value="" />
-          <option name="sourceFilePath" value="docke-compose.yml" />
+          <option name="sourceFilePath" value="docker-compose.yml" />
         </settings>
       </deployment>
       <method v="2" />
     </configuration>
-    <configuration name="hello" type="docker-deploy" factoryName="dockerfile" server-name="Docker">
+    <configuration name="string/Dockerfile builder" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
       <deployment type="dockerfile">
         <settings>
-          <option name="imageTag" value="hello" />
-          <option name="containerName" value="hello" />
+          <option name="imageTag" value="golangalpine_builder" />
+          <option name="buildCliOptions" value="--target builder" />
+          <option name="buildKitEnabled" value="true" />
+          <option name="buildOnly" value="true" />
+          <option name="contextFolderPath" value="." />
+          <option name="sourceFilePath" value="string/Dockerfile" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="string/Dockerfile" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
+      <deployment type="dockerfile">
+        <settings>
+          <option name="imageTag" value="string-service" />
+          <option name="containerName" value="string-service" />
+          <option name="contextFolderPath" value="." />
           <option name="portBindings">
             <list>
               <DockerPortBindingImpl>
-                <option name="containerPort" value="8888" />
-                <option name="hostPort" value="8888" />
+                <option name="containerPort" value="10086" />
+                <option name="hostPort" value="10086" />
               </DockerPortBindingImpl>
             </list>
           </option>
-          <option name="sourceFilePath" value="service/hello/Dockerfile" />
+          <option name="sourceFilePath" value="string/Dockerfile" />
         </settings>
       </deployment>
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Docker.University-course-selection" />
-      <item itemvalue="Docker.hello" />
-      <item itemvalue="Go 构建.go build hello.go" />
-      <item itemvalue="Go 构建.go build shorturl/api" />
-      <item itemvalue="Go 构建.go build shorturl.go" />
-      <item itemvalue="Go 构建.go build University-course-selection/service/user/rpc" />
-      <item itemvalue="Go 构建.go build University-course-selection/service/user/api" />
+      <item itemvalue="Docker.docker-compose.yml: Compose 部署" />
+      <item itemvalue="Docker.string/Dockerfile" />
+      <item itemvalue="Docker.string/Dockerfile builder" />
+      <item itemvalue="Go 构建.go build github.com/FFFcomewhere/University-course-selection/string" />
+      <item itemvalue="Go 构建.go build github.com/FFFcomewhere/University-course-selection/string/rpc" />
+      <item itemvalue="Go 构建.go build github.com/FFFcomewhere/University-course-selection/string/rpc (1)" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Go 构建.go build University-course-selection/service/user/api" />
-        <item itemvalue="Go 构建.go build University-course-selection/service/user/rpc" />
-        <item itemvalue="Go 构建.go build shorturl/api" />
-        <item itemvalue="Go 构建.go build shorturl.go" />
-        <item itemvalue="Go 构建.go build hello.go" />
+        <item itemvalue="Docker.string/Dockerfile" />
+        <item itemvalue="Go 构建.go build github.com/FFFcomewhere/University-course-selection/string/rpc" />
+        <item itemvalue="Go 构建.go build github.com/FFFcomewhere/University-course-selection/string/rpc (1)" />
+        <item itemvalue="Go 构建.go build github.com/FFFcomewhere/University-course-selection/string" />
+        <item itemvalue="Docker.string/Dockerfile builder" />
       </list>
     </recent_temporary>
   </component>
@@ -217,6 +274,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="添加string任务进行测试" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加string任务进行测试" />
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>

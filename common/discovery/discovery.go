@@ -2,8 +2,8 @@ package discovery
 
 import (
 	"context"
-	"github.com/coreos/etcd/mvcc/mvccpb"
-	"go.etcd.io/etcd/clientv3"
+	"go.etcd.io/etcd/api/v3/mvccpb"
+	"go.etcd.io/etcd/client/v3"
 	"log"
 	"sync"
 	"time"
@@ -96,19 +96,3 @@ func (s *ServiceDiscovery) GetSService() []string {
 func (s *ServiceDiscovery) Close() error {
 	return s.client.Close()
 }
-
-//
-//func main() {
-//	var endpoints = []string{"localhost:2379"}
-//	service := NewServiceDiscovery(endpoints)
-//	defer service.Close()
-//	service.WatchService("/web/")
-//	service.WatchService("/gRPC")
-//	service.WatchService("/time")
-//	for {
-//		select {
-//		case <-time.Tick(10 * time.Second):
-//			log.Println(service.GetSService())
-//		}
-//	}
-//}
