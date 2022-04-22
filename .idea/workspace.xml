@@ -4,33 +4,95 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9f883b19-e419-40dd-a8ed-4de902c8761f" name="变更" comment="添加string任务进行测试">
-      <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/discovery/discovery_test.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/discovery/register_test.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/loadbalance/loadbalance.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/loadbalance/loadbalance_test.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/user.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/string/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/string/rpc/client.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/string/rpc/pb/string.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/string/rpc/server.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/string/rpc/string-service/service.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/string/string_test.go" afterDir="false" />
+    <list default="true" id="9f883b19-e419-40dd-a8ed-4de902c8761f" name="变更" comment="测试go-kit cli">
+      <change afterPath="$PROJECT_DIR$/admin/cmd/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/cmd/service/service.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/cmd/service/service_gen.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/pkg/endpoint/endpoint.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/pkg/endpoint/endpoint_gen.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/pkg/endpoint/middleware.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/pkg/http/handler.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/pkg/http/handler_gen.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/pkg/service/middleware.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/pkg/service/service.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/cmd/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/cmd/service/service.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/cmd/service/service_gen.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/pkg/endpoint/endpoint.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/pkg/endpoint/endpoint_gen.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/pkg/endpoint/middleware.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/pkg/http/handler.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/pkg/http/handler_gen.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/pkg/model/user.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/pkg/service/middleware.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/pkg/service/service.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/cmd/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/cmd/service/service.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/cmd/service/service_gen.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/pkg/endpoint/endpoint.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/pkg/endpoint/endpoint_gen.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/pkg/endpoint/middleware.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/pkg/http/handler.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/pkg/http/handler_gen.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/pkg/model/user.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/pkg/service/middleware.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/pkg/service/service.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/框架图.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/项目方案.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gateway/cmd/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gateway/cmd/service/service.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gateway/cmd/service/service_gen.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gateway/pkg/endpoint/endpoint.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gateway/pkg/endpoint/endpoint_gen.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gateway/pkg/endpoint/middleware.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gateway/pkg/http/handler.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gateway/pkg/http/handler_gen.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gateway/pkg/model/user.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gateway/pkg/service/middleware.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gateway/pkg/service/service.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/http_cli/pkg/model/user.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/http_cli/pkg/service/service.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pkg/bootstrap/BootstrapProperty.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pkg/bootstrap/bootstrap_config.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pkg/common/service_instance.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pkg/config/config.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pkg/config/config_property.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pkg/config/need_config.conf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pkg/discovery/discovery_client.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pkg/discovery/discovery_init.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pkg/discovery/kit_etcd_client.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pkg/mysql/mysql.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pkg/ratelimiter/instruments.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test-demo/conf/conf.moneydodo.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test-demo/copy/model/user.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test-demo/copy/service/service.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test-demo/db/mysql.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test-demo/model/user.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test-demo/mysql_test.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/cmd/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/cmd/service/service.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/cmd/service/service_gen.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/pkg/endpoint/endpoint.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/pkg/endpoint/endpoint_gen.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/pkg/endpoint/middleware.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/pkg/http/handler.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/pkg/http/handler_gen.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/pkg/model/user.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/pkg/service/middleware.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/pkg/service/service.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/discovery/discovery.go" beforeDir="false" afterPath="$PROJECT_DIR$/common/discovery/discovery.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/discovery/register.go" beforeDir="false" afterPath="$PROJECT_DIR$/common/discovery/register.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docke-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/discovery/discovery.go" beforeDir="false" afterPath="$PROJECT_DIR$/string/discovery/discovery.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/discovery/discovery_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/string/discovery/discovery_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/discovery/register.go" beforeDir="false" afterPath="$PROJECT_DIR$/string/discovery/register.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/discovery/register_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/string/discovery/register_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/loadbalance/loadbalance.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/loadbalance/loadbalance.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/loadbalance/loadbalance_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/loadbalance/loadbalance_test.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/string/config/config.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/string/discovery/discovery.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/string/discovery/register.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/string/endpoint/endpoint.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/string/main.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/string/plugins/logging.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/string/service/service.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/string/test1.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/string/transport/http.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/user.go" beforeDir="false" afterPath="$PROJECT_DIR$/admin/pkg/model/user.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/string/string_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/string/string_test.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,17 +123,16 @@
     <option name="indexEntireGoPath" value="false" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$USER_HOME$/go_path/pkg/mod/go.etcd.io/etcd/client/v3@v3.5.3/client.go" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/string/Dockerfile" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/common/discovery/discovery.go" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/common/discovery/register.go" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$USER_HOME$/go_path/pkg/mod/github.com/zeromicro/go-zero@v1.3.2/core/logx/tracelogger.go" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/../../pkg/mod/go.etcd.io/etcd/client/v3@v3.5.3/client.go" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/string/rpc/server.go" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/docker-compose.yml" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/string/main.go" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/common/discovery/register_test.go" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/string/rpc/server.go" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/common/discovery/discovery_test.go" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$USER_HOME$/go_path/pkg/mod/github.com/go-kit/kit@v0.12.0/sd/etcdv3/client.go" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/../../pkg/mod/github.com/zeromicro/go-zero@v1.3.2/core/logx/tracelogger.go" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/test-demo/conf/conf.moneydodo.yaml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/test-demo/db/mysql.go" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/test-demo/model/user.go" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/string/Dockerfile" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../pkg/mod/github.com/go-kit/kit@v0.12.0/sd/etcdv3/client.go" root0="SKIP_INSPECTION" />
     <setting file="file://$USER_HOME$/sdk/go1.17.8/src/context/context.go" root0="SKIP_INSPECTION" />
   </component>
   <component name="KubernetesApiPersistence">
@@ -81,7 +142,7 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="27mzJQBVfPKtYFguYHQVE9uTqMV" />
-  <component name="ProjectLevelVcsManager">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
@@ -103,25 +164,26 @@
     <property name="go.modules.go.list.on.any.changes.was.set" value="true" />
     <property name="go.sdk.automatically.set" value="true" />
     <property name="go.watchers.conflict.with.on.save.actions.check.performed" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="go.vgo" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/user" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/string/rpc" />
-      <recent name="$PROJECT_DIR$/common" />
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/pkg" />
+      <recent name="$PROJECT_DIR$/user" />
+      <recent name="$PROJECT_DIR$/gateway" />
+      <recent name="$PROJECT_DIR$/core" />
+      <recent name="$PROJECT_DIR$/app" />
+      <recent name="$PROJECT_DIR$/admin" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/string/rpc/string-service" />
-      <recent name="$PROJECT_DIR$/string" />
-      <recent name="$PROJECT_DIR$/service/shorturl/rpc/transform" />
-      <recent name="$PROJECT_DIR$/service/shorturl/rpc" />
-      <recent name="$PROJECT_DIR$/etcd" />
+      <recent name="$PROJECT_DIR$/pkg" />
+      <recent name="$PROJECT_DIR$/test-demo" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/user/cmd" />
+      <recent name="$PROJECT_DIR$/conf" />
     </key>
   </component>
-  <component name="RunManager" selected="Docker.string/Dockerfile">
+  <component name="RunManager" selected="Go 构建.go build main.go (1)">
     <configuration default="true" type="GoApplicationRunConfiguration" factoryName="Go Application">
       <module name="University-course-selection" />
       <working_directory value="$PROJECT_DIR$" />
@@ -129,25 +191,6 @@
       <kind value="FILE" />
       <directory value="$PROJECT_DIR$" />
       <filePath value="$PROJECT_DIR$" />
-      <method v="2" />
-    </configuration>
-    <configuration name="go build github.com/FFFcomewhere/University-course-selection/string" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
-      <module name="University-course-selection" />
-      <working_directory value="$PROJECT_DIR$" />
-      <EXTENSION ID="net.ashald.envfile">
-        <option name="IS_ENABLED" value="false" />
-        <option name="IS_SUBST" value="false" />
-        <option name="IS_PATH_MACRO_SUPPORTED" value="false" />
-        <option name="IS_IGNORE_MISSING_FILES" value="false" />
-        <option name="IS_ENABLE_EXPERIMENTAL_INTEGRATIONS" value="false" />
-        <ENTRIES>
-          <ENTRY IS_ENABLED="true" PARSER="runconfig" />
-        </ENTRIES>
-      </EXTENSION>
-      <kind value="FILE" />
-      <package value="github.com/FFFcomewhere/University-course-selection/string" />
-      <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$/string/main.go" />
       <method v="2" />
     </configuration>
     <configuration name="go build github.com/FFFcomewhere/University-course-selection/string/rpc (1)" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
@@ -166,7 +209,7 @@
       <kind value="FILE" />
       <package value="github.com/FFFcomewhere/University-course-selection/string/rpc" />
       <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$/string/rpc/server.go" />
+      <filePath value="$PROJECT_DIR$/string/rpc/client.go" />
       <method v="2" />
     </configuration>
     <configuration name="go build github.com/FFFcomewhere/University-course-selection/string/rpc" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
@@ -185,7 +228,32 @@
       <kind value="FILE" />
       <package value="github.com/FFFcomewhere/University-course-selection/string/rpc" />
       <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$/string/rpc/client.go" />
+      <filePath value="$PROJECT_DIR$/string/rpc/server.go" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build github.com/FFFcomewhere/University-course-selection/user/cmd" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="University-course-selection" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <package value="github.com/FFFcomewhere/University-course-selection/user/cmd" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$/user/cmd/main.go" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build main.go (1)" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="University-course-selection" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="FILE" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$/string/main.go" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build main.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="University-course-selection" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="FILE" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$/user/cmd/main.go" />
       <method v="2" />
     </configuration>
     <configuration default="true" type="GoTestRunConfiguration" factoryName="Go Test">
@@ -207,53 +275,21 @@
       </deployment>
       <method v="2" />
     </configuration>
-    <configuration name="string/Dockerfile builder" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
-      <deployment type="dockerfile">
-        <settings>
-          <option name="imageTag" value="golangalpine_builder" />
-          <option name="buildCliOptions" value="--target builder" />
-          <option name="buildKitEnabled" value="true" />
-          <option name="buildOnly" value="true" />
-          <option name="contextFolderPath" value="." />
-          <option name="sourceFilePath" value="string/Dockerfile" />
-        </settings>
-      </deployment>
-      <method v="2" />
-    </configuration>
-    <configuration name="string/Dockerfile" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
-      <deployment type="dockerfile">
-        <settings>
-          <option name="imageTag" value="string-service" />
-          <option name="containerName" value="string-service" />
-          <option name="contextFolderPath" value="." />
-          <option name="portBindings">
-            <list>
-              <DockerPortBindingImpl>
-                <option name="containerPort" value="10086" />
-                <option name="hostPort" value="10086" />
-              </DockerPortBindingImpl>
-            </list>
-          </option>
-          <option name="sourceFilePath" value="string/Dockerfile" />
-        </settings>
-      </deployment>
-      <method v="2" />
-    </configuration>
     <list>
       <item itemvalue="Docker.docker-compose.yml: Compose 部署" />
-      <item itemvalue="Docker.string/Dockerfile" />
-      <item itemvalue="Docker.string/Dockerfile builder" />
-      <item itemvalue="Go 构建.go build github.com/FFFcomewhere/University-course-selection/string" />
+      <item itemvalue="Go 构建.go build github.com/FFFcomewhere/University-course-selection/user/cmd" />
+      <item itemvalue="Go 构建.go build main.go" />
       <item itemvalue="Go 构建.go build github.com/FFFcomewhere/University-course-selection/string/rpc" />
       <item itemvalue="Go 构建.go build github.com/FFFcomewhere/University-course-selection/string/rpc (1)" />
+      <item itemvalue="Go 构建.go build main.go (1)" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Docker.string/Dockerfile" />
-        <item itemvalue="Go 构建.go build github.com/FFFcomewhere/University-course-selection/string/rpc" />
+        <item itemvalue="Go 构建.go build main.go (1)" />
         <item itemvalue="Go 构建.go build github.com/FFFcomewhere/University-course-selection/string/rpc (1)" />
-        <item itemvalue="Go 构建.go build github.com/FFFcomewhere/University-course-selection/string" />
-        <item itemvalue="Docker.string/Dockerfile builder" />
+        <item itemvalue="Go 构建.go build github.com/FFFcomewhere/University-course-selection/string/rpc" />
+        <item itemvalue="Go 构建.go build github.com/FFFcomewhere/University-course-selection/user/cmd" />
+        <item itemvalue="Go 构建.go build main.go" />
       </list>
     </recent_temporary>
   </component>
@@ -277,9 +313,21 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="添加string任务进行测试" />
-    <option name="LAST_COMMIT_MESSAGE" value="添加string任务进行测试" />
+    <MESSAGE value="测试go-kit cli" />
+    <option name="LAST_COMMIT_MESSAGE" value="测试go-kit cli" />
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/test-demo/user/pkg/endpoint/endpoint.go</url>
+          <line>25</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

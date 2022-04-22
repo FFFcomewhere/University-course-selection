@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-	"github.com/FFFcomewhere/University-course-selection/common/discovery"
 	"log"
 	"net/http"
 	"testing"

@@ -1,10 +1,8 @@
 package discovery
 
 import (
-	"context"
 	"flag"
 	"fmt"
-	"github.com/go-kit/kit/sd/etcdv3"
 	"log"
 	"strconv"
 	"testing"
@@ -46,13 +44,12 @@ func TestEtcdPushData(t *testing.T) {
 	)
 
 	//开启etcd服务器
-	//var registerClient RegisterClient
-	//registerClient, err := NewRegisterClient(*etcdHost, *etcdPort)
-	//if err != nil {
-	//	fmt.Println(err)
-	//}
-	var etcdAddrs = []string{*etcdHost + ":" + strconv.Itoa(*etcdPort)}
-	var options = etcdv3.ClientOptions{DialTimeout: ttl}
-	client := etcdv3.NewClient(context.Background(), etcdAddrs)
+	var registerClient RegisterClient
+	registerClient, err := NewRegisterClient(*etcdHost, *etcdPort)
+	if err != nil {
+		fmt.Println(err)
+	}
+
+	fmt.Println(registerClient.client)
 
 }
